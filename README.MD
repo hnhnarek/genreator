@@ -10,6 +10,7 @@ bash /tmp/magenta-install.sh
 - `conda activate magenta`
 - `pip install -r requirements.txt`
 - Download the model (groovae_4bar) from this [repo](https://github.com/magenta/magenta/tree/main/magenta/models/music_vae#pre-trained-checkpoints)
+    - Update model path in `inference.py` or download and untar file in `models/` directory
 
 ## Usage
 
@@ -26,7 +27,7 @@ python app.py
 ```
 
 
-# Usage with MAX for Live
+## Usage with MAX for Live
 
 For MAX for Live you need a patch and runing local server
 
@@ -41,3 +42,7 @@ SERVER_URL = "ip:port of running flask app for model"
 ```
 python max_server.py
 ```
+
+- Use flask app host:port to send data from MAX for Live | udpsend
+
+- Use local server client_ip:client_port to receive data in MAX for Live | udpreceive
