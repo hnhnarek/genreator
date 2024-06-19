@@ -1,8 +1,8 @@
 import csv
 
-DATA_PATH = './'
+DATA_PATH = './data/'
 
-with open(DATA_PATH + 'metadata_new.csv') as f:
+with open('metadata_new.csv') as f:
     reader = csv.DictReader(f)
     data = list(reader)
 
