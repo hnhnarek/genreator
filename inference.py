@@ -1,10 +1,7 @@
 import numpy as np
-import magenta.music as mm
 from magenta.models.music_vae import configs
 from magenta.models.music_vae.trained_model import TrainedModel
 import numpy as np
-import os
-import tensorflow.compat.v1 as tf
 import note_seq
 from note_seq.protobuf import music_pb2
 from data import list_of_genres, data, DATA_PATH

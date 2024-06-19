@@ -5,9 +5,14 @@ import base64
 
 app = Flask(__name__)
 
+
+@app.route('/status', methods=['GET'])
+def status():
+    return jsonify({'status': 'ok'})
+
+
 @app.route('/generate', methods=['GET'])
 def generate():
-    # should serve this requests.get("http://81.16.3.115:8989/generate", params={"genres": genres})
     genres = request.args.get('genres')
     weights = request.args.get('weights')
     genres = genres.split(',')
@@ -22,9 +27,6 @@ def generate():
         result = f.read()
     encoded_content = base64.b64encode(result).decode('utf-8')
     return jsonify({'result': encoded_content})
-
-
-
 
 
 if __name__ == '__main__':

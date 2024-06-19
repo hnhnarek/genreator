@@ -29,7 +29,7 @@ gunicorn -w 3 -b 0.0.0.0:8989 flask_app:app
 
 ## Usage with MAX for Live
 
-For MAX for Live you need a patch and runing local server
+For MAX for Live besides flask server which is serving model, you need a runing local server for communication for patch
 
 - Adjust configs
 ```
@@ -37,6 +37,13 @@ client_ip = "host for MAX for Live udpreceive | default : 127.0.0.1"
 client_port = "port for MAX for Live udpreceive | default : 7374"
 SERVER_URL = "ip:port of running flask app for model"
 ```
+
+
+- Install dependencies
+```
+pip install python-osc requests
+```
+
 
 - Run the server
 ```

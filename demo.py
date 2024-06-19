@@ -1,11 +1,8 @@
 import streamlit as st
 import numpy as np
-import magenta.music as mm
 from magenta.models.music_vae import configs
 from magenta.models.music_vae.trained_model import TrainedModel
 import numpy as np
-import os
-import tensorflow.compat.v1 as tf
 import note_seq
 from note_seq.protobuf import music_pb2
 from data import list_of_genres, data, DATA_PATH
@@ -224,7 +221,7 @@ elif page == "Demo with genres":
         for _idx, genre in enumerate(genres_select):
             genre_data = [r for r in data if r['style'] == genre]
             random_sample = np.random.choice(genre_data,size=w[_idx])
-            midi_file = [i['midi_filename'] for i in random_sample]
+            midi_file = [DATA_PATH + i['midi_filename'] for i in random_sample]
             inputs.extend(midi_file)
         results = mix_midis(inputs, model, config)
         attempts = 10
@@ -237,7 +234,7 @@ elif page == "Demo with genres":
             for _idx, genre in enumerate(genres_select):
                 genre_data = [r for r in data if r['style'] == genre]
                 random_sample = np.random.choice(genre_data,size=w[_idx])
-                midi_file = [i['midi_filename'] for i in random_sample]
+                midi_file = [DATA_PATH + i['midi_filename'] for i in random_sample]
                 inputs.extend(midi_file)
             results = mix_midis(inputs, model, config)
             if attempts == 0:
@@ -256,5 +253,3 @@ elif page == "Demo with genres":
         for file in downloadable_files:
             with open(file, "rb") as f:
                 st.download_button(label=f"{file.split('/')[-1]}", data=f, file_name=file)
-
-        
