@@ -29,7 +29,7 @@ gunicorn -w 3 -b 0.0.0.0:8989 flask_app:app
 
 ## Usage with MAX for Live
 
-For MAX for Live besides flask server which is serving model, you need a runing local server for communication for patch
+For MAX for Live besides flask server which is **serving model**, you need a runing local server for communication with MAX patch
 
 - Adjust configs
 ```
