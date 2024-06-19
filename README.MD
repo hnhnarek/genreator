@@ -21,9 +21,9 @@ streamlit run demo.py
 
 OR
 
-- Use flask web server
+- Use flask web server (-w for workers count)
 ```
-python app.py
+gunicorn -w 3 -b 0.0.0.0:8989 flask_app:app
 ```
 
 
