@@ -46,3 +46,10 @@ python max_server.py
 - Use flask app host:port to send data from MAX for Live | udpsend
 
 - Use local server client_ip:client_port to receive data in MAX for Live | udpreceive
+
+
+## TODO
+
+- refactor code : it's shitty all around :))
+- experiment with more models
+- compile model to use without server
