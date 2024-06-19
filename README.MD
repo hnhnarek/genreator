@@ -9,7 +9,7 @@ bash /tmp/magenta-install.sh
 ```
 - `conda activate magenta`
 - `pip install -r requirements.txt`
-- Download the model from this [repo](https://github.com/magenta/magenta/tree/main/magenta/models/music_vae#pre-trained-checkpoints)
+- Download the model (groovae_4bar) from this [repo](https://github.com/magenta/magenta/tree/main/magenta/models/music_vae#pre-trained-checkpoints)
 
 ## Usage
 
