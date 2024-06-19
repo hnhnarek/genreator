@@ -1,0 +1,4 @@
+flask
+numpy
+magenta
+streamlit
