@@ -25,3 +25,19 @@ OR
 python app.py
 ```
 
+
+# Usage with MAX for Live
+
+For MAX for Live you need a patch and runing local server
+
+- Adjust configs
+```
+client_ip = "host for MAX for Live udpreceive | default : 127.0.0.1"
+client_port = "port for MAX for Live udpreceive | default : 7374"
+SERVER_URL = "ip:port of running flask app for model"
+```
+
+- Run the server
+```
+python max_server.py
+```
