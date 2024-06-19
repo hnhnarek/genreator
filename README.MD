@@ -14,6 +14,8 @@ bash /tmp/magenta-install.sh
 
 ## Usage
 
+You can use it standalone or with MAX for Live. With standalone option you will have a web interface in case of streamlit or API in case of running flask app.
+
 - You can use streamlit demo
 ```
 streamlit run demo.py
@@ -27,9 +29,18 @@ gunicorn -w 3 -b 0.0.0.0:8989 flask_app:app
 ```
 
 
-## Usage with MAX for Live
+# Usage with MAX for Live
 
 For MAX for Live besides flask server which is **serving model**, you need a runing local server for communication with MAX patch
+
+So you need 
+- flask server for model (instructions are above)
+- local server for MAX for Live
+- patch in MAX for Live
+
+___
+
+### Below are the instructions for local server
 
 - Adjust configs
 ```
