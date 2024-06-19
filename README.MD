@@ -12,7 +12,7 @@ bash /tmp/magenta-install.sh
 - Download the model (groovae_4bar) from this [repo](https://github.com/magenta/magenta/tree/main/magenta/models/music_vae#pre-trained-checkpoints)
     - Update model path in `inference.py` or download and untar file in `models/` directory
 
-## Usage
+## Usage [standalone]
 
 You can use it standalone or with MAX for Live. With standalone option you will have a web interface in case of streamlit or API in case of running flask app.
 
@@ -29,7 +29,7 @@ gunicorn -w 3 -b 0.0.0.0:8989 flask_app:app
 ```
 
 
-# Usage with MAX for Live
+## Usage with MAX for Live
 
 For MAX for Live besides flask server which is **serving model**, you need a runing local server for communication with MAX patch
 
