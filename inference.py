@@ -7,7 +7,7 @@ import os
 import tensorflow.compat.v1 as tf
 import note_seq
 from note_seq.protobuf import music_pb2
-from demo_data import list_of_genres, data, DATA_PATH
+from data import list_of_genres, data, DATA_PATH
 
 
 models = {
