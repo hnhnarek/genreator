@@ -173,7 +173,10 @@ def generate_mix(genres_select, weights):
     inputs = []
     for _idx, genre in enumerate(genres_select):
         genre_data = [r for r in data if r['style'] == genre]
-        random_sample = np.random.choice(genre_data,size=w[_idx])
+        if genre_data:
+            random_sample = np.random.choice(genre_data,size=w[_idx])
+        else:
+            random_sample = np.random.choice(data,size=0)
         midi_file = [DATA_PATH + i['midi_filename'] for i in random_sample]
         inputs.extend(midi_file)
     results = mix_midis(inputs, model, config)
@@ -186,7 +189,10 @@ def generate_mix(genres_select, weights):
         inputs = []
         for _idx, genre in enumerate(genres_select):
             genre_data = [r for r in data if r['style'] == genre]
-            random_sample = np.random.choice(genre_data,size=w[_idx])
+            if genre_data:
+                random_sample = np.random.choice(genre_data,size=w[_idx])
+            else:
+                random_sample = np.random.choice(data,size=0)
             midi_file = [DATA_PATH + i['midi_filename'] for i in random_sample]
             inputs.extend(midi_file)
         results = mix_midis(inputs, model, config)
