@@ -15,9 +15,10 @@ def status():
 def generate():
     genres = request.args.get('genres')
     weights = request.args.get('weights')
+    print(genres, "FF", weights)
     genres = genres.split(',')
     if weights:
-        weights = weights.split(',')
+        weights = [int(i) for i in weights.split(',')]
     else:
         weights = []
     result_file_path = generate_mix(genres, weights)
