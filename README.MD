@@ -40,7 +40,7 @@ gunicorn -w 3 -b 0.0.0.0:8989 flask_app:app
 For MAX for Live besides flask server which is **serving model**, you need a runing local server for communication with MAX patch
 
 So you need 
-- flask server for model (instructions are above)
+- flask server for model (instructions are above, it's pretty fast to run on your local machine you don't need a GPU)
 - local server for MAX for Live
 - patch in MAX for Live (ask dm for patch)
 
