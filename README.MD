@@ -42,13 +42,13 @@ For MAX for Live besides flask server which is **serving model**, you need a run
 So you need 
 - flask server for model (instructions are above)
 - local server for MAX for Live
-- patch in MAX for Live
+- patch in MAX for Live (ask dm for patch)
 
 ___
 
 ### Below are the instructions for local server
 
-- Adjust configs
+- Adjust configs in `max_server.py` file
 ```
 client_ip = "host for MAX for Live udpreceive | default : 127.0.0.1"
 client_port = "port for MAX for Live udpreceive | default : 7374"
