@@ -2,7 +2,9 @@
 
 A generative device for musicians, to aid and inspire the writing/production process by generating rhythms based on 3 genres. It should allow interpolation between these genres to create interesting patterns.
 
-NOTE: The work was done during the [Generative Music AI Workshop](https://www.upf.edu/web/mtg/generative-music-ai-workshop)
+Check the demo [here](http://genreator.medlee.studio:8501/).
+
+NOTE: The work was done during the [Generative Music AI Workshop](https://www.upf.edu/web/mtg/generative-music-ai-workshop).
 
 ## Dependencies
 
