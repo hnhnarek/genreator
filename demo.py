@@ -167,10 +167,10 @@ def cut_to_4_bars(note_seq, time_signature_numerator=4, time_signature_denominat
 
 st.sidebar.title("Genreator | Navigation")
 st.sidebar.markdown("___")
-page = st.sidebar.selectbox("Select a page", ["Select page", "Demo with files", "Demo with genres"])
+page = st.sidebar.selectbox("Select a page", ["Select page", "Mix midi files", "Mix with genres"])
 model,config  = load_model_st()
 
-if page == "Demo with files":
+if page == "Mix midi files":
     st.title("Genreator Demo")
     st.header("This is a demo of the genre mixing model")
     st.markdown("___")
@@ -205,7 +205,7 @@ if page == "Demo with files":
         for file in downloadable_files:
             with open(file, "rb") as f:
                 st.download_button(label=f"{file.split('/')[-1]}", data=f, file_name=file)
-elif page == "Demo with genres":
+elif page == "Mix with genres":
     st.title("Genreator Demo")
     st.header("This is a demo of the genre mixing model")
     genres_select = st.multiselect("Select the genres", list_of_genres, max_selections=3)

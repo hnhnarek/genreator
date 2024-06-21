@@ -35,7 +35,7 @@ def handler_function(address, *args):
             decoded_content = base64.b64decode(res)
             #result_file_name = f"{uuid.uuid4()}.mid"
             result_file_name = f"mix_{'_'.join([i.replace('/','-') for i in genres])}.mid"
-            f_path = '/Users/ottavio/Desktop/midiGen/' + result_file_name #change according to your path
+            f_path = '/tmp/' + result_file_name #change according to your path
             with open(f_path,'wb') as f:
                 f.write(decoded_content)
             res = client.send_message("read", str(f_path))
