@@ -8,11 +8,8 @@ Check the demo [here](http://genreator.medlee.studio:8501/).
 NOTE: The work was done during the [Generative Music AI Workshop](https://www.upf.edu/web/mtg/generative-music-ai-workshop).
 
 **You can hear the recorded demo which is created with using only generated patterns.**
+`genrerator.mp3`
 
-<audio controls>
-  <source src="genrerator.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
 ## Dependencies
 
