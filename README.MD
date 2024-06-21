@@ -1,10 +1,18 @@
 # GENREATOR project
 
+
 A generative device for musicians, to aid and inspire the writing/production process by generating rhythms based on 3 genres. It should allow interpolation between these genres to create interesting patterns.
 
 Check the demo [here](http://genreator.medlee.studio:8501/).
 
 NOTE: The work was done during the [Generative Music AI Workshop](https://www.upf.edu/web/mtg/generative-music-ai-workshop).
+
+**You can hear the recorded demo which is created with using only generated patterns.**
+
+<audio controls>
+  <source src="genrerator.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
 ## Dependencies
 
